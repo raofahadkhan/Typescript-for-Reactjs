@@ -10,6 +10,8 @@ import Input from "./components/Input";
 import Container from "./components/Container";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/context/Box";
+import { UserContextProvider } from "./components/context/UserContext";
+import User from "./components/context/User";
 
 function App() {
   const personName = {
@@ -33,7 +35,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <ThemeContextProvider>
+      {/* <ThemeContextProvider>
         <Greet name="Fahad" messageCount={20} isLoggedIn={false} />
         <Person name={personName} />
         <PersonList names={nameList} />
@@ -51,7 +53,10 @@ function App() {
         <Input value="" handleChange={(event) => console.log(event)} />
         <Container styles={{ border: "1px solid black", padding: "1rem" }} />
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
