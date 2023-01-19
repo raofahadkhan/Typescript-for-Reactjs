@@ -17,6 +17,7 @@ import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import Lists from "./components/generics/Lists";
 import RandomNumber from "./components/restriction/RandomNumber";
+import Toast from "./components/templateliterals/Toast";
 
 function App() {
   const personName = {
@@ -86,8 +87,9 @@ function App() {
         ]}
         onClick={(item) => console.log(item)}
       /> */}
-      <RandomNumber value={10} isPositive />
+      {/* <RandomNumber value={10} isPositive /> */}
       {/*from now we cant pass isNegative and isZero because we have retricted it  */}
+      <Toast position="left-center" />
     </div>
   );
 }
