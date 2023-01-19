@@ -16,6 +16,7 @@ import Counter from "./components/class/Counter";
 import Private from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
 import Lists from "./components/generics/Lists";
+import RandomNumber from "./components/restriction/RandomNumber";
 
 function App() {
   const personName = {
@@ -63,11 +64,10 @@ function App() {
       </UserContextProvider> */}
       {/* <Counter message="The Count Value is" /> */}
       {/* <Private isLoggedIn={true} Component={Profile} /> */}
-      <Lists
+      {/* <Lists
         items={["Batman", "Superman", "Wonder Woman"]}
         onClick={(item) => console.log(item)}
       />
-      <Lists items={[1, 2, 3, 4, 5]} onClick={(item) => console.log(item)} />
       <Lists items={[1, 2, 3, 4, 5]} onClick={(item) => console.log(item)} />
       <Lists
         items={[
@@ -85,7 +85,9 @@ function App() {
           },
         ]}
         onClick={(item) => console.log(item)}
-      />
+      /> */}
+      <RandomNumber value={10} isPositive />
+      {/*from now we cant pass isNegative and isZero because we have retricted it  */}
     </div>
   );
 }
