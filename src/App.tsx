@@ -5,7 +5,7 @@ import PersonList from "./components/PersonList";
 import Status from "./components/Status";
 import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import Input from "./components/Input";
 import Container from "./components/Container";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
@@ -18,6 +18,7 @@ import Profile from "./components/auth/Profile";
 import Lists from "./components/generics/Lists";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateliterals/Toast";
+import Button from "./components/html/Button";
 
 function App() {
   const personName = {
@@ -89,7 +90,10 @@ function App() {
       /> */}
       {/* <RandomNumber value={10} isPositive /> */}
       {/*from now we cant pass isNegative and isZero because we have retricted it  */}
-      <Toast position="left-center" />
+      {/* <Toast position="left-center" /> */}
+      <Button variant="primary" onClick={() => console.log("clicked")}>
+        Primary Button
+      </Button>
     </div>
   );
 }
