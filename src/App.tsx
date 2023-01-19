@@ -19,6 +19,7 @@ import Lists from "./components/generics/Lists";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateliterals/Toast";
 import Button from "./components/html/Button";
+import Text from "./components/polymorphic/Text";
 
 function App() {
   const personName = {
@@ -91,9 +92,18 @@ function App() {
       {/* <RandomNumber value={10} isPositive /> */}
       {/*from now we cant pass isNegative and isZero because we have retricted it  */}
       {/* <Toast position="left-center" /> */}
-      <Button variant="primary" onClick={() => console.log("clicked")}>
+      {/* <Button variant="primary" onClick={() => console.log("clicked")}>
         Primary Button
-      </Button>
+      </Button> */}
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
